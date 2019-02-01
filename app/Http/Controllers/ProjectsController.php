@@ -11,65 +11,49 @@ class ProjectsController extends Controller
     {
         $projects = Project::all();
         
-
-        return view('projects.index', ['projects' => $projects]);
+        return view('projects.index', compact('projects'));
     }
 
 
     public function create()
     {
         return view('projects.create');
-
     }
 
 
-    public function show($id)
+    public function show(Project $project)
     {
-        $project = Project::findorFail($id);
-
         return view('projects.show', compact('project'));
     }
 
 
     public function store()
     {
-        $project = new Project();
-
-        $project->title = request('title');
-        $project->description = request('description');
+        Project::create(request(['title', 'description']));
         
-        $project->save();
-
         return redirect('/projects');
     }
 
 
-    public function edit($id)
+    public function edit(Project $project)
     {
-        $project = Project::findorFail($id);
         return view('projects.edit', compact('project'));
     }
 
 
-    public function update($id)
+    public function update(Project $project)
     {
-        $project = Project::findorFail($id);
-
-        $project->title = request('title');
-        $project->description = request('description');
-
-        $project->save();
+        $project->update(request(['title', 'description']));
 
         return redirect('/projects');
     }
 
 
-    public function destroy($id)
+    public function destroy(Project $project)
     {
-        Project::findorFail($id)->delete();
+        $project->delete();
 
         return redirect('/projects');
     }
-
 
 }
