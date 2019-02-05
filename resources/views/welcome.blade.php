@@ -9,6 +9,8 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
         <!-- Styles -->
         <style>
             html, body {
@@ -85,13 +87,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="/projects">Projects</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://github.com/renedotone">GitHub</a>
-                    <a href="https://twitter.com/renedotone">Twitter</a>
-                    <a href="https://www.linkedin.com/in/renedotone/">LinkedIn</a>
+                    <a href="/projects">Projects</a>                  
+                    <a href="https://github.com/renedotone"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/renedotone/"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://twitter.com/renedotone"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="http://www.rene.one/">rene.one</a> 
                 </div>
             </div>
         </div>
